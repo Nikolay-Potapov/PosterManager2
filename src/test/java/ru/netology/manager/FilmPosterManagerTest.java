@@ -17,9 +17,9 @@ class FilmPosterManagerTest {
 
     @Test
     void shouldAdd() {
-        FilmPoster movie01 = new FilmPoster(391772, "https://www.kinopoisk.ru/film/391772/", "Всегда говори «ДА»", "Комедия");
+        FilmPoster movie01 = new FilmPoster(3917, "https://www.kinopoisk.ru/film/3917/", "Всегда говори «ДА»", "Комедия");
         FilmPoster movie02 = new FilmPoster(361, "https://www.kinopoisk.ru/film/361/", "Бойцовский клуб", "Триллер");
-        FilmPoster movie03 = new FilmPoster(1188529, "https://www.kinopoisk.ru/film/1188529/", "Достать ножи", "Детектив");
+        FilmPoster movie03 = new FilmPoster(11885, "https://www.kinopoisk.ru/film/11885/", "Достать ножи", "Детектив");
 
         manager.add(movie01);
         manager.add(movie02);
@@ -61,9 +61,8 @@ class FilmPosterManagerTest {
 
         FilmPoster[] actual = manager.getLastFilms();
         FilmPoster[] expected = new FilmPoster[]{
-                movie12, movie11, movie10, movie09,
-                movie08, movie07, movie06, movie05,
-                movie04, movie03, movie02, movie01
+                movie12, movie11, movie10, movie09, movie08,
+                movie07, movie06, movie05, movie04, movie03
         };
 
         assertArrayEquals(expected, actual);
